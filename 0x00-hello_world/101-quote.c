@@ -1,6 +1,9 @@
 #include <stdio.h>
-#define TRUE 1
-#define FALSE 0
+#include <string.h>
+#include <stdlib.h>
+#include <fcntl.h>
+#include <unistd.h>
+
 /**
  * main - program that prints a quote with a new line, to the standard error.
  *
@@ -11,6 +14,6 @@
 
 int main(void)
 {
-	printf("and that piece of art is useful\" - Dora Korpar, 2015-10-19\n");
+	write(2, "and that piece of art is useful\" - Dora Korpar, 2015-10-19\n", 58);
 	return (0);
 }

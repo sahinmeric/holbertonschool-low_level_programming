@@ -10,19 +10,19 @@
 
 int main(void)
 {
-	char i;
-	char j;
+	int i;
+	int j;
 
-	for (i = '0'; i <= '9'; i++)
+	for (i = 48; i <= 56; i++)
 	{
 
-	for (j = '0'; j <= '9'; j++)
+	for (j = i + 1; j <= 57; j++)
 	{
 
 	putchar(i);
 	putchar(j);
 
-	if (i != '9' || j != '8')
+	if (i != 56 || j != 57)
 	{
 
 	putchar(',');

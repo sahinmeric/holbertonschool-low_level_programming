@@ -12,12 +12,12 @@ int print_sign(int n)
 	if (n > 48)
 	{
 	return (1);
-	_putchar('+');
+	_putchar(43);
 	}
 	else if (n < 48)
 	{
 	return (-1);
-	_putchar('-');
+	_putchar(45);
 	}
 	else
 	_putchar(48);

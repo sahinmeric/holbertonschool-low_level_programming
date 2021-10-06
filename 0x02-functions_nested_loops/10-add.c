@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdio.h>
 
 /**
  * add - Entry point
@@ -14,5 +15,6 @@ int add(int x, int y)
 	int sum = x + y;
 
 	add(x, y);
-	return (sum);
+	printf("%d", sum);
+	return (0);
 }

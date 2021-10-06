@@ -18,11 +18,11 @@ void print_to_98(int n)
 	{
 		if (n != 98)
 		{
-		_putchar(i + '0');
+		printf("%d", i);
 		_putchar(',');
 		_putchar(' ');
 		}
 		else
-		_putchar(i + '0');
+		printf("%d", i);
 	}
 }

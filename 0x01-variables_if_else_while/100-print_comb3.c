@@ -13,10 +13,10 @@ int main(void)
 	int i;
 	int j;
 
-	for (i = 48; i <= 56; i++)
+	for (i = 48; i <= 56; i++) /* i = 0; i <= 8 */
 	{
 
-	for (j = i + 1; j <= 57; j++)
+	for (j = i + 1; j <= 57; j++) /*j = i + 1; j <=9 */
 	{
 
 	putchar(i);

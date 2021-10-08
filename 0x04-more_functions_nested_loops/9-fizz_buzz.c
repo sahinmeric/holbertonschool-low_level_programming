@@ -21,6 +21,7 @@ int main(void)
 		if (i % 3 == 0)
 		{
 		printf("Fizz ");
+		continue;
 		}
 		if (i % 5 == 0)
 		{

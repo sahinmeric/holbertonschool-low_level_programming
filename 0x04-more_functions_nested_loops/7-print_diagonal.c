@@ -23,7 +23,6 @@ void print_diagonal(int n)
 			_putchar(92);
 			_putchar(10);
 		}
-		_putchar(10);
 	}
 	else
 		{

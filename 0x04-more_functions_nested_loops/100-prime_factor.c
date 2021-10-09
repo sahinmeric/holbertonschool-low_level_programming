@@ -2,14 +2,15 @@
 #include <stdio.h>
 #include <math.h>
 /**
- * prime_factor - Finds and prints the largest prime factor
+ * main - Finds and prints the largest prime factor
  * of the number 612852475143
- * @n: size of the triangle
+ *
  * Return: 0 success
  */
 
-void prime_factor(int n)
+int main(void)
 {
+	long int n = 612852475143;
 	int i;
 	int largest;
 
@@ -32,4 +33,5 @@ void prime_factor(int n)
 		}
 
 		printf("%d\n", largest);
+		return (0);
 }

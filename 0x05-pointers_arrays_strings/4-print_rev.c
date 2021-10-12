@@ -10,21 +10,13 @@
 
 void print_rev(char *s)
 {
-	char temp;
-	int left, right;
+int i = 0;
+	while (s[i])
+	i++;
 
-	left = 0;
-	right = 0;
-
-	right = strlen(s - 1);
-
-	while (left < right)
+	while (i--)
 	{
-	temp = s[right];
-	s[right] = s[left];
-	s[left] = temp;
-	left++;
-	right--;
+	putchar(s[i]);
 	}
-	printf("%s", s);
+	putchar('\n');
 }

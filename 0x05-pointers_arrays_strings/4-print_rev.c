@@ -10,19 +10,21 @@
 
 void print_rev(char *s)
 {
-	int length, i, lindex, rindex;
-	char tmp;
+	char temp;
+	int left, right;
 
-	length = strlen(s);
-	lindex = 0;
-	rindex = length - 1;
+	left = 0;
+	right = 0;
 
-	for (i = lindex; i < rindex; i++)
+	right = strlen(s - 1);
+
+	while (left < right)
 	{
-		tmp = s[i];
-		s[i] = s[rindex];
-		s[rindex] = tmp;
-		rindex--;
+	temp = s[right];
+	s[right] = s[left];
+	s[left] = temp;
+	left++;
+	right--;
 	}
 	printf("%s", s);
 }

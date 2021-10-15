@@ -7,7 +7,7 @@
  *@s1: first string
  *@s2: second string
  *
- * Return: dest
+ * Return: difference
  */
 
 int _strcmp(char *s1, char *s2)

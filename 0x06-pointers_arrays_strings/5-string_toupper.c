@@ -9,16 +9,18 @@
  *
  * Return: 0 success
  */
+
 char *string_toupper(char *s)
 {
-	char ch;
-	int i;
+	int i = 0;
 
-	while (s[i])
+	while (s[i] != 0)
 	{
-	ch = s[i];
-	_putchar(toupper(ch));
-	i++;
+		if (s[i] > 97 && s[i] <= 122)
+		{
+			s[i] = s[i] - 32;
+		}
+		i++;
 	}
-	return (0);
+	return (s);
 }

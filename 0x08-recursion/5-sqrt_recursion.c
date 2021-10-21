@@ -2,39 +2,47 @@
 #include <stdio.h>
 
 /**
- *_sqrt_recursion - function that returns the natural square root of a number.
- *
- *@n: the number that will be checked of its sqrt
- *
- * Return: 0, 1, -1 or sqrt of the number if it has a natural sqrt
- */
-int sqr(int k)
+  * calculate - asdasdas
+  *@k: starting point
+  *@n: given number
+  * Return: 0, 1, -1 or sqrt of the number if it has a natural sqrt
+  */
+int calculate(int n, int k)
 {
-	return (k * k);
-}
+	int sqrtk = k * k;
 
-
-int _sqrt_recursion(int n)
-{
-	int k = 2;
-	int sqrk = sqr(k);
-
-	if (n == 0 || n == 1 || n == -1)
-	{
-		return (n);
-	}
-
-	if (sqrk == n)
+	if (sqrtk == n)
 	{
 		return (k);
 	}
-	if (sqrk > n)
+	if (sqrtk > n)
 	{
 		return (-1);
 	}
 	else
 	{
-		k++;
-		return (_sqrt_recursion(n));
+		return (calculate(n, k + 1));
+	}
+}
+/**
+ * _sqrt_recursion - function that returns the natural root of a number
+ * @n: given number
+ *
+ * Return: result
+ */
+
+int _sqrt_recursion(int n)
+{
+	if (n == 0 || n == 1 || n == -1)
+	{
+		return (n);
+	}
+	if (n < 0)
+	{
+		return (-1);
+	}
+	else
+	{
+		return (calculate(n, 1));
 	}
 }

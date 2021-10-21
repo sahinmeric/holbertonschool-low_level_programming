@@ -8,27 +8,32 @@
  *
  * Return: 0, 1, -1 or sqrt of the number if it has a natural sqrt
  */
+int sqr(int k)
+{
+	return (k * k);
+}
+
+
 int _sqrt_recursion(int n)
 {
-	int i = 1;
-	int k = i * i;
+	int k = 1;
+	int sqrk = sqr(k);
 
 	if (n == 0 || n == 1 || n == -1)
 	{
 		return (n);
 	}
 
-
-	if (k == n)
+	if (sqrk == n)
 	{
-		return (i);
+		return (k);
 	}
-	if (k > n)
+	if (sqrk > n)
 	{
 		return (-1);
 	}
 	else
 	{
-		return (i * _sqrt_recursion(i + 1));
+		return (sqr(k + 1));
 	}
 }

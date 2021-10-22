@@ -14,7 +14,7 @@ int main(int argc __attribute__((unused)), char *argv[])
 	int j = atoi(argv[2]);
 	int multiply = i * j;
 
-	if (argc == 2)
+	if (argc == 3)
 	{
 	printf("%d\n", multiply);
 	}

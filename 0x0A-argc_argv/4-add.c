@@ -21,19 +21,14 @@ int main(int argc, char *argv[])
 
 	for (i = 1; i < argc; i++)
 	{
-		/*  check if there is a symbol or character in the given numbers
-		 *  if there is print Error\n and return 1
-		 **/
 		for (j = 0; argv[i][j] != '\0'; j++)
 		{
-			if (argv[i][j] > 58 || argv[i][j] <= 47)
-				{
-					printf("Error\n");
-					return (1);
-				}
+			if (argv[i][j] < 58 || argv[i][j] >= 47)
+			{
+				printf("Error\n");
+				return (1);
+			}
 		}
-
-		/* add the given numbers and return result */
 
 		res = res + atoi(argv[i]);
 	}

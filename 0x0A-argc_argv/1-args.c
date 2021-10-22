@@ -2,14 +2,15 @@
 #include <stdio.h>
 
 /**
-  * main - a function that prints its name followed by \n
+  * main - prints the number of arguments passed into it.
   *@argc: count of the arguments
   *@argv: array of pointers to the strings which are those arguments
   * Return: exit status, 0 is success, other than 0 is error
   */
-int main(int argc __attribute__((unused)), char *argv[])
+int main(int argc, char *argv[] __attribute__((unused)))
 {
-	printf("%s\n", *argv);
+
+	printf("%d\n", argc);
 
 	return (0);
 }

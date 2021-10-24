@@ -1,5 +1,10 @@
 #include "main.h"
-
+/**
+ * _puts - prints a string
+ *@s: The string to be printed to stdout
+ *
+ * Return: no return value
+ */
 void _puts(char *s)
 {
 	int n;

@@ -1,4 +1,4 @@
-char *_memcpy(char *dest, char *src, unsigned int n)
+char *_strcpy(char *dest, char *src)
 {
 	return (0);
 }

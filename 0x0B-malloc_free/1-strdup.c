@@ -5,14 +5,14 @@
  *_strdup -  function that returns a pointer to a newly allocated space in memr
  *which contains a copy of the string given as a parameter.
  *
- *@str: size of an array
+ *@str: string that will be duplicated
  * Return: On success 0
  * On error, NULL if the size is 0 or if it fails
  */
 char *_strdup(char *str)
 {
 	int len = strlen(str);
-	char *array = (char *)malloc(len * sizeof(char));
+	char *array = (char *)malloc(len * sizeof(char) + 1);
 	int i;
 
 	if (str == NULL)

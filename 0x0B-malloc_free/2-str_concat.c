@@ -2,38 +2,34 @@
 #include <stdlib.h>
 #include <string.h>
 /**
- *_strdup -  function that returns a pointer to a newly allocated space in memr
- *which contains a copy of the string given as a parameter.
+ *str_concat -function that concatenates two strings.
  *
- *@str: string that will be duplicated
+ *@s1: string that will be concatenated
+ *@s2: string that will be concatenated
  * Return: On success 0
  * On error, NULL if the size is 0 or if it fails
  */
-char *_strdup(char *str)
+char *str_concat(char *s1, char *s2)
 {
-	int len = strlen(str);
-	char *array = (char *)malloc(len * sizeof(char) + 1);
+	int len1 = strlen(s1) + 1;
+	int len2 = strlen(s2) + 1;
+	char *array = (char *)malloc((len1 + len2) * (sizeof(char) + 1));
 	int i;
 
-	if (str == NULL)
+	if (s1 == NULL || s2 == NULL || array == NULL || len1 == 1 || len2 == 1)
 	{
 		return (NULL);
 	}
 
-
-	if (array == NULL)
+	for (i = 0; i < len1; i++)
 	{
-		return (NULL);
+		array[i] = s1[i];
 	}
 
-	if (len == 1)
+while (i != '\0')
 	{
-		return (NULL);
-	}
-
-	for (i = 0; i < len; i++)
-	{
-		array[i] = str[i];
+	array[i] = s2[i];
+	i++;
 	}
 	return (array);
 }

@@ -31,9 +31,9 @@ char *_strdup(char *str)
 		return (NULL);
 	}
 
-	for (j = 0; *(str + j) != '\0'; i++)
+	for (j = 0; j < i; j++)
 	{
-		*(array + j) = *(str + j);
+		array[j] = str[j];
 	}
 
 	return (array);

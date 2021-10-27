@@ -19,6 +19,8 @@ char *_strdup(char *str)
 	{
 		return (NULL);
 	}
+
+
 	if (array == NULL)
 	{
 		return (NULL);

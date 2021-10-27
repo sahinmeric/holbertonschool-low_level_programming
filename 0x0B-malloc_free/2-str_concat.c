@@ -15,22 +15,24 @@ char *_strdup(char *str)
 	char *array = (char *)malloc(len * sizeof(char) + 1);
 	int i;
 
-	if (array == NULL || str == NULL)
-	{
-		return (NULL);
-	}
-	if (str == 0)
+	if (str == NULL)
 	{
 		return (0);
 	}
-	if (len == 1)
+	else if (array == NULL)
 	{
 		return (NULL);
 	}
+	else if (len == 1)
+	{
+		return (NULL);
+	}
+	else
+	{
 	for (i = 0; i < len; i++)
 	{
 		array[i] = str[i];
 	}
 	return (array);
-	free(array);
+	}
 }

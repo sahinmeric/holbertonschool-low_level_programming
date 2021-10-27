@@ -13,7 +13,7 @@ char *str_concat(char *s1, char *s2)
 {
 	int len1 = strlen(s1) + 1;
 	int len2 = strlen(s2) + 1;
-	char *array = (char *)malloc((len1 + len2) * (sizeof(char) + 1));
+	char *array = (char *)malloc((len1 + len2) * sizeof(char));
 	int i;
 
 	if (s1 == NULL || s2 == NULL || array == NULL || len1 == 1 || len2 == 1)
@@ -26,7 +26,7 @@ char *str_concat(char *s1, char *s2)
 		array[i] = s1[i];
 	}
 
-while (i != '\0')
+	while (i != '\0')
 	{
 	array[i] = s2[i];
 	i++;

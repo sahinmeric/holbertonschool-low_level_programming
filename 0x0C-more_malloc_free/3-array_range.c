@@ -10,7 +10,7 @@
  */
 int *array_range(int min, int max)
 {
-	int len, i;
+	unsigned int len, i;
 	int *array;
 
 	if (min > max)

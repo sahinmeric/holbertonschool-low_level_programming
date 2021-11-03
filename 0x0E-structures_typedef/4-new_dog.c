@@ -1,31 +1,14 @@
 #include <stdio.h>
 #include "dog.h"
 /**
- *print_dog - function that prints a struct dog
+ *new_dog - function that creates a new dog.
  *
- *@d: argument
+ *@name: argument
+ *@age: argument
+ *@owner: argument
  * Return: void
  *
  */
-void print_dog(struct dog *d)
+dog_t *new_dog(char *name, float age, char *owner)
 {
-	if (d != NULL)
-	{
-		if (d->name != NULL)
-			printf("Name: %s\n", d->name);
-		else
-		{
-			printf("Name: (nil)\n");
-		}
-
-			printf("Age: %f\n", d->age);
-
-		if (d->owner != NULL)
-			printf("Owner: %s\n", d->owner);
-		else
-		{
-			printf("Owner: (nil)\n");
-		}
-
-	}
 }

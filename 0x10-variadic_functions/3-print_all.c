@@ -23,16 +23,16 @@ void print_all(const char * const format, ...)
 			separator = "";
 		switch (format[i])
 		{
-			case 'c':
+			case ('c'):
 				printf("%c%s", va_arg(args, int), separator);
 			break;
-			case 'i':
+			case ('i'):
 				printf("%d%s", va_arg(args, int), separator);
 			break;
-			case 'f':
+			case ('f'):
 				printf("%f%s", va_arg(args, double), separator);
 			break;
-			case 's':
+			case ('s'):
 				str = va_arg(args, char *);
 				if (str == NULL)
 				{

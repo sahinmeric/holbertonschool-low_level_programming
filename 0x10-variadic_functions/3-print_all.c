@@ -23,16 +23,16 @@ void print_all(const char * const format, ...)
 
 		switch (format[i])
 		{
-		case 'c':
+			case 'c':
 				printf("%c%s", va_arg(args, int), separator);
-		break;
-		case 'i':
+			break;
+			case 'i':
 				printf("%d%s", va_arg(args, int), separator);
-		break;
-		case 'f':
+			break;
+			case 'f':
 				printf("%f%s", va_arg(args, double), separator);
-		break;
-		case 's':
+			break;
+			case 's':
 				str = va_arg(args, char *);
 
 				if (str == NULL)
@@ -41,7 +41,7 @@ void print_all(const char * const format, ...)
 					break;
 				}
 				printf("%s%s", str, separator);
-		break;
+			break;
 		}
 		i++;
 	}

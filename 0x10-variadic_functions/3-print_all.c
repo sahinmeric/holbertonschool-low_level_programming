@@ -5,7 +5,7 @@
  *print_all - function that prints anything
  *
  * @format: seperator of integers passed to func
- *Return: Return void
+ * Return: Return void
  */
 void print_all(const char * const format, ...)
 {

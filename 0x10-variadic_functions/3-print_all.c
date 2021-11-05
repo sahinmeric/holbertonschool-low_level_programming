@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdarg.h>
 #include "variadic_functions.h"
+
 /**
  *print_all - function that prints anything
  *
@@ -9,9 +10,9 @@
  */
 void print_all(const char * const format, ...)
 {
-	va_list args;
 	int i = 0, len = 0;
 	char *str, *separator = ", ";
+	va_list args;
 
 	va_start(args, format);
 	while (format[len])

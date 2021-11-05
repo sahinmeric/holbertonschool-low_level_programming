@@ -18,9 +18,8 @@ void print_all(const char * const format, ...)
 		len++;
 	while (format && format[i])
 	{
-		if (i == (len - 1))
+		if (i == len - 1)
 			separator = "";
-
 		switch (format[i])
 		{
 			case 'c':
@@ -34,7 +33,6 @@ void print_all(const char * const format, ...)
 			break;
 			case 's':
 				str = va_arg(args, char *);
-
 				if (str == NULL)
 				{
 					printf("(nil)%s", separator);

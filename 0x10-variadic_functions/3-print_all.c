@@ -1,9 +1,9 @@
 #include <stdio.h>
+#include <stdef.h>
 #include "variadic_functions.h"
 
 /**
  *print_all - function that prints anything
- *
  * @format: seperator of integers passed to func
  * Return: Return void
  */

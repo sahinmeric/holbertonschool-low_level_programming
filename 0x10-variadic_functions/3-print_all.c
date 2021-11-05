@@ -38,10 +38,11 @@ void print_all(const char * const format, ...)
 				if (str == NULL)
 					str = "(nil)";
 
-				printf("%s", va_arg(args, char *));
+				printf("%s", str);
 				break;
 
 		}
+		i++;
 
 	}
 	printf("\n");

@@ -25,18 +25,13 @@ list_t *add_node(list_t **head, const char *str)
 
 	if (new == NULL)
 	{
-		free(s);
 		return (NULL);
 	}
 	else
 	{
 		new->str = s;
-	/*	printf("new-> str = %s\n", s);*/
 		new->len = len;
-	/*	printf("new-> len = %d\n", len);*/
-		new->next = NULL;
 		new->next = *head;
-	/*	printf("new->next =%d\n",&head);*/
 	}
 	*head = new;
 	return (new);

@@ -1,29 +1,21 @@
 #include <stdio.h>
-#include <string.h>
 #include <stdlib.h>
 #include "lists.h"
 
 /**
- * add_node_end - function that adds a new node at the end of a list_t list.
+ * add_nodeint_end - func that adds a new node at the end of a listint_t list.
  *
  * @head: a pointer to a list_t
- * @str: a string that will be added
+ * @n: the int that will be added to new node
  * Return: returns a pointer that points a new list_t list
  */
-list_t *add_node_end(list_t **head, const char *str)
+listint_t *add_nodeint_end(listint_t **head, const int n)
 {
-	char *s = strdup(str);
-	int len;
-	list_t *new, *temp;
+	int k = n;
 
-	if (s == NULL)
-	{
-		return (NULL);
-	}
-	for (len = 0; s[len]; len++)
-	;
+	listint_t *new, *temp;
 
-	new = malloc(sizeof(list_t));
+	new = malloc(sizeof(listint_t));
 
 	if (new == NULL)
 	{
@@ -31,8 +23,7 @@ list_t *add_node_end(list_t **head, const char *str)
 	}
 	else
 	{
-		new->str = s;
-		new->len = len;
+		new->n = k;
 		new->next = NULL;
 	}
 	if (*head == NULL)

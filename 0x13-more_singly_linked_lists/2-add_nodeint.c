@@ -4,26 +4,19 @@
 #include "lists.h"
 
 /**
- * add_node - function that adds a new node at the beginning of a list_t list.
+ * add_nodeint -func that adds a new node at the beginning of a listint_t list.
  *
  * @head: a pointer to a list_t
- * @str: a string that will be added
- * Return: returns a pointer that points a new list_t list
+ * @n: the int that will be added
+ * Return: returns a pointer that points a new listint_t list
  */
-list_t *add_node(list_t **head, const char *str)
+listint_t *add_nodeint(listint_t **head, const int n)
 {
-	char *s = strdup(str);
-	int len;
-	list_t *new;
+	int k = n;
+	listint_t *new;
 
-	if (s == NULL)
-	{
-		return (NULL);
-	}
-	for (len = 0; s[len]; len++)
-	;
 
-	new = malloc(sizeof(list_t));
+	new = malloc(sizeof(listint_t));
 
 	if (new == NULL)
 	{
@@ -31,8 +24,7 @@ list_t *add_node(list_t **head, const char *str)
 	}
 	else
 	{
-		new->str = s;
-		new->len = len;
+		new->n = k;
 		new->next = *head;
 	}
 	*head = new;
